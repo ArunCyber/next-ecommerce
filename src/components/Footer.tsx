@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <>
+        <div>
         <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
             <div className="container py-5">
                 <div className="pb-4 mb-4"  style={{ borderBottom: "1px solid rgba(226, 175, 24, 0.5)" }}>
@@ -19,10 +19,10 @@ export default function Footer() {
                         </div>
                         <div className="col-lg-3">
                             <div className="d-flex justify-content-end pt-3">
-                                <a className="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i className="fab fa-youtube"></i></a>
-                                <a className="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i className="fab fa-linkedin-in"></i></a>
+                                <a className="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i className="fab fa-twitter"></i></a>
+                                <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i className="fab fa-facebook-f"></i></a>
+                                <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i className="fab fa-youtube"></i></a>
+                                <a className="btn btn-outline-secondary btn-md-square rounded-circle" href="#"><i className="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -33,29 +33,29 @@ export default function Footer() {
                             <h4 className="text-light mb-3">Why People Like us!</h4>
                             <p className="mb-4">typesetting, remaining essentially unchanged. It was 
                                 popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
-                            <a href="" className="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                            <a href="#" className="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <div className="d-flex flex-column text-start footer-item">
                             <h4 className="text-light mb-3">Shop Info</h4>
-                            <a className="btn-link" href="">About Us</a>
-                            <a className="btn-link" href="">Contact Us</a>
+                            <a className="btn-link" href="#">About Us</a>
+                            {/* <a className="btn-link" href="">Contact Us</a>
                             <a className="btn-link" href="">Privacy Policy</a>
                             <a className="btn-link" href="">Terms & Condition</a>
                             <a className="btn-link" href="">Return Policy</a>
-                            <a className="btn-link" href="">FAQs & Help</a>
+                            <a className="btn-link" href="">FAQs & Help</a> */}
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <div className="d-flex flex-column text-start footer-item">
                             <h4 className="text-light mb-3">Account</h4>
-                            <a className="btn-link" href="">My Account</a>
+                            {/* <a className="btn-link" href="">My Account</a>
                             <a className="btn-link" href="">Shop details</a>
                             <a className="btn-link" href="">Shopping Cart</a>
                             <a className="btn-link" href="">Wishlist</a>
                             <a className="btn-link" href="">Order History</a>
-                            <a className="btn-link" href="">International Orders</a>
+                            <a className="btn-link" href="">International Orders</a> */}
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
@@ -86,6 +86,6 @@ export default function Footer() {
         </div>
 
         <a href="#" className="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i className="fa fa-arrow-up"></i></a>  
-        </>
+        </div>
     )
 }

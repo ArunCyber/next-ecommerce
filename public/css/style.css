@@ -495,3 +495,7 @@
 }
 /*** Footer End ***/
 
+/* Custom Styles start */
+.slick-slide {
+    padding: 0 10px 0 10px;
+}

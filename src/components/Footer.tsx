@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <div>
+        <>
         <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
             <div className="container py-5">
                 <div className="pb-4 mb-4"  style={{ borderBottom: "1px solid rgba(226, 175, 24, 0.5)" }}>
@@ -50,8 +50,8 @@ export default function Footer() {
                     <div className="col-lg-3 col-md-6">
                         <div className="d-flex flex-column text-start footer-item">
                             <h4 className="text-light mb-3">Account</h4>
-                            {/* <a className="btn-link" href="">My Account</a>
-                            <a className="btn-link" href="">Shop details</a>
+                            <a className="btn-link" href="">My Account</a>
+                            {/* <a className="btn-link" href="">Shop details</a>
                             <a className="btn-link" href="">Shopping Cart</a>
                             <a className="btn-link" href="">Wishlist</a>
                             <a className="btn-link" href="">Order History</a>
@@ -76,16 +76,16 @@ export default function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span className="text-light"><a href="#"><i className="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                        <span className="text-light"><a href="#"><i className="fas fa-copyright text-light me-2"></i>Next Js Shop</a>, All right reserved.</span>
                     </div>
                     <div className="col-md-6 my-auto text-center text-md-end text-white">
-                        Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        Designed By <a className="border-bottom" href="#">PITS</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <a href="#" className="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i className="fa fa-arrow-up"></i></a>  
-        </div>
+        </>
     )
 }

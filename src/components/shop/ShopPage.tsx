@@ -4,7 +4,8 @@ import Image from 'next/image';
 
 
 
-export default function ShopPage({products}) {
+export default function ShopPage({products, brands, categories}) {
+
     return (
         <div className="container-fluid fruite py-5">
             <div className="container py-5">
@@ -33,29 +34,34 @@ export default function ShopPage({products}) {
                         </div>
                         <div className="row g-4">
 
-                            <Sidebar />
+                            <Sidebar brands={brands} categories={categories} />
 
                             <div className="col-lg-9">
                                 <div className="row g-4 justify-content-center">
 
                                     {products.map((product) => (
+                                        
                                         <div key={product.id} className="col-md-6 col-lg-6 col-xl-4">
-                                            <div className="rounded position-relative fruite-item">
-                                                <div className="fruite-img">
-                                                    <img src={product.image} className="img-fluid w-100 rounded-top" alt={product.title} width={500} height={500} />
-                                                    {/* <Image src={product.image} className="img-fluid w-100 rounded-top" alt={product.title} width={500} height={500} /> */}
-                                                </div>
-                                                <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>{product.category.charAt(0).toUpperCase() + product.category.slice(1)}</div>
-                                                <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>{product.title.substring(0, 30) + "..."}</h4>
-                                                    <p>{product.description.substring(0, 120) + "..."}</p>
-                                                    <div className="d-flex justify-content-between flex-lg-wrap">
-                                                        <p className="text-dark fs-5 fw-bold mb-0">${product.price}</p>
-                                                        <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                            
+                                                <div className="rounded position-relative fruite-item">
+                                                <a href={'shop/product/' + product.id}>
+                                                    <div className="fruite-img">
+                                                        <img src={product.image} className="img-fluid w-100 rounded-top" alt={product.title} width={500} height={500} />
+                                                        {/* <Image src={product.image} className="img-fluid w-100 rounded-top" alt={product.title} width={500} height={500} /> */}
                                                     </div>
+                                                    <div className="text-white bg-secondary px-3 py-1 rounded position-absolute" style={{ top: '10px', left: '10px' }}>{product.category.charAt(0).toUpperCase() + product.category.slice(1)}</div>
+                                                    <div className="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                        <h4>{product.title.substring(0, 30) + "..."}</h4>
+                                                        <p>{product.description.substring(0, 120) + "..."}</p>
+                                                        <div className="d-flex justify-content-between flex-lg-wrap">
+                                                            <p className="text-dark fs-5 fw-bold mb-0">${product.price}</p>
+                                                            <a href="#" className="btn border border-secondary rounded-pill px-3 text-primary"><i className="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                        </div>
+                                                    </div> </a>
                                                 </div>
-                                            </div>
+                                           
                                         </div>
+                                       
                                     ))}
 
                                     {/* Repeat similar blocks for other products */}

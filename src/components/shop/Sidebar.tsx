@@ -1,6 +1,11 @@
 import Image from 'next/image';
 
-export default function Sidebar() {
+export default function Sidebar({brands, categories}) {
+    console.log(categories);
+
+    const productBrand = brands.products;
+    const productCat = categories.categories;
+
     return (
         <div className="col-lg-3">
             <div className="row g-4">
@@ -8,69 +13,30 @@ export default function Sidebar() {
                     <div className="mb-3">
                         <h4>Categories</h4>
                         <ul className="list-unstyled fruite-categorie">
-                            <li>
-                                <div className="d-flex justify-content-between fruite-name">
-                                    <a href="#"><i className="fas fa-apple-alt me-2"></i>Apples</a>
-                                    <span>(3)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="d-flex justify-content-between fruite-name">
-                                    <a href="#"><i className="fas fa-apple-alt me-2"></i>Oranges</a>
-                                    <span>(5)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="d-flex justify-content-between fruite-name">
-                                    <a href="#"><i className="fas fa-apple-alt me-2"></i>Strawbery</a>
-                                    <span>(2)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="d-flex justify-content-between fruite-name">
-                                    <a href="#"><i className="fas fa-apple-alt me-2"></i>Banana</a>
-                                    <span>(8)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="d-flex justify-content-between fruite-name">
-                                    <a href="#"><i className="fas fa-apple-alt me-2"></i>Pumpkin</a>
-                                    <span>(5)</span>
-                                </div>
-                            </li>
+                            {
+                                productCat.map((cat) => (
+                                    <li>
+                                        <div className="d-flex justify-content-between fruite-name">
+                                            <a href="#"><i className="fas fa-apple-alt me-2"></i>{cat.charAt(0).toUpperCase() + cat.slice(1)}</a>
+                                            <span>(3)</span>
+                                        </div>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>
                 <div className="col-lg-12">
                     <div className="mb-3">
-                        <h4 className="mb-2">Price</h4>
-                        {/* <input type="range" className="form-range w-100" id="rangeInput" name="rangeInput" min="0" max="500" defaultValue="0" onInput={(e) => document.getElementById('amount').value = e.target.value} /> */}
-                        {/* <output id="amount" name="amount" min="0" max="500" htmlFor="rangeInput">0</output> */}
-                    </div>
-                </div>
-                <div className="col-lg-12">
-                    <div className="mb-3">
-                        <h4>Additional</h4>
-                        <div className="mb-2">
-                            <input type="radio" className="me-2" id="Categories-1" name="Categories-1" value="Beverages" />
-                            <label htmlFor="Categories-1"> Organic</label>
-                        </div>
-                        <div className="mb-2">
-                            <input type="radio" className="me-2" id="Categories-2" name="Categories-1" value="Beverages" />
-                            <label htmlFor="Categories-2"> Fresh</label>
-                        </div>
-                        <div className="mb-2">
-                            <input type="radio" className="me-2" id="Categories-3" name="Categories-1" value="Beverages" />
-                            <label htmlFor="Categories-3"> Sales</label>
-                        </div>
-                        <div className="mb-2">
-                            <input type="radio" className="me-2" id="Categories-4" name="Categories-1" value="Beverages" />
-                            <label htmlFor="Categories-4"> Discount</label>
-                        </div>
-                        <div className="mb-2">
-                            <input type="radio" className="me-2" id="Categories-5" name="Categories-1" value="Beverages" />
-                            <label htmlFor="Categories-5"> Expired</label>
-                        </div>
+                        <h4>Featured Brands</h4>
+                        {
+                            productBrand.map((brand) => (
+                                <div className="mb-2">
+                                    <input type="radio" className="me-2" id="Categories-1" name="Categories-1" value="Beverages" />
+                                    <label htmlFor="Categories-1"> {brand.brand.charAt(0).toUpperCase() + brand.brand.slice(1)}</label>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
                 <div className="col-lg-12">

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function NavMenu() {
     return (
         <>
@@ -23,8 +25,8 @@ export default function NavMenu() {
                     </button>
                     <div className="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div className="navbar-nav mx-auto">
-                            <a href="index.html" className="nav-item nav-link active">Home</a>
-                            <a href="shop.html" className="nav-item nav-link">Shop</a>
+                            <Link href="/" className="nav-item nav-link active">Home</Link>
+                            <Link href="/shop" className="nav-item nav-link">Shop</Link>
                             <a href="shop-detail.html" className="nav-item nav-link">Shop Detail</a>
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>

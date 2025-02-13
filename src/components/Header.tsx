@@ -1,8 +1,5 @@
-// components/Header.js
-// "use client";
-// import Link from 'next/link';
+
 import NavMenu from "@/components/NavMenu";
-// import styles from './Header.module.css'; // Optional: Use CSS Modules for styling
 
 export default function Header() {
     return (

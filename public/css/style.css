@@ -499,3 +499,9 @@
 .slick-slide {
     padding: 0 10px 0 10px;
 }
+
+.slick-prev, .slick-next {
+    background: #81c408 !important;
+    border-radius: 50px;
+    padding: 1px 0px 0 0px !important;
+}

@@ -10,18 +10,27 @@ import CarouselShopping from "@/components/CarouselShopping";
 import InnerBanner from '@/components/InnerBanner';
 import BestsellerThreeCol from '@/components/BestsellerThreeCol';
 
-export default function Home() {
+export async function getServerSideProps() {
+  const res = await fetch(`https://fakestoreapi.in/api/products/`);
+  const products = await res.json();
+
+  return {
+    props: { products },
+  };
+}
+
+export default function Home({ products }) {
 
   return (
     <Layout>
       <Banner />
       <FeaturesPayment />
-      <TabCarousel />
-      <FeaturesProducts />
-      <CarouselShopping />
+      {/* <TabCarousel /> */}
+      {/* <FeaturesProducts /> */}
+      <CarouselShopping filter={products} headingTitle='Fresh Organic Vegetables' />
       <InnerBanner />
-      <BestsellerThreeCol />
-      <FactStar />
+      {/* <BestsellerThreeCol /> */}
+      {/* <FactStar /> */}
       <Testimonials />
     </Layout>
   )

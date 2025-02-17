@@ -2,7 +2,6 @@ import Layout from '../app/layout'
 
 import InnerPagesBanner from '@/components/InnerPagesBanner';
 import ShopPage from '@/components/shop/ShopPage';
-// import InnerPagesBanner from '@/components/InnerPagesBanner';
 
 export async function getServerSideProps() {
     const res = await fetch('https://fakestoreapi.in/api/products');

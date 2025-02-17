@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
   //   };
   //   return config;
   // },
+  images: {
+    domains: ['storage.googleapis.com'], // Add your allowed domains here
+  },
 };
 
 export default nextConfig;

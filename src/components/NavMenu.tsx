@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import FontAwesomeIcon from "@/components/FontAwesomeIcon";
 
 export default function NavMenu() {
     return (
@@ -7,8 +8,16 @@ export default function NavMenu() {
                 <div className="container topbar bg-primary d-none d-lg-block">
                     <div className="d-flex justify-content-between">
                         <div className="top-info ps-2">
-                            <small className="me-3"><i className="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" className="text-white">123 Street, New York</a></small>
-                            <small className="me-3"><i className="fas fa-envelope me-2 text-secondary"></i><a href="#" className="text-white">Email@Example.com</a></small>
+                            {/* <small className="me-3"> */}
+                            {/* <i className="fas fa-map-marker-alt me-2 text-secondary"></i> */}
+                            <FontAwesomeIcon icon={['fas', 'map-marker-alt']} className="me-2 text-secondary" />
+                            <a href="#" className="text-white">123 Street, New York</a>
+                            {/* </small> */}
+                            {/* <small className="me-3"> */}
+                            {/* <i className="fas fa-envelope me-2 text-secondary"></i> */}
+                            <FontAwesomeIcon icon={['fas', 'envelope']} className="me-2 text-secondary" />
+                            <a href="#" className="text-white">Email@Example.com</a>
+                            {/* </small> */}
                         </div>
                         <div className="top-link pe-2">
                             <a href="#" className="text-white"><small className="text-white mx-2">Privacy Policy</small>/</a>
@@ -41,13 +50,15 @@ export default function NavMenu() {
                                 <a href="contact.html" className="nav-item nav-link">Contact</a> */}
                             </div>
                             <div className="d-flex m-3 me-0">
-                                <button className="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search text-primary"></i></button>
+                                <button className="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                    <FontAwesomeIcon icon={['fas', 'search']} className="text-primary" />
+                                </button>
                                 <a href="#" className="position-relative me-4 my-auto">
-                                    <i className="fa fa-shopping-bag fa-2x"></i>
+                                    <FontAwesomeIcon icon={['fas', 'shopping-bag']} className="fa-2x" />
                                     <span className="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" >3</span>
                                 </a>
                                 <a href="#" className="my-auto">
-                                    <i className="fas fa-user fa-2x"></i>
+                                    <FontAwesomeIcon icon={['fas', 'user']} className="fa-2x" />
                                 </a>
                             </div>
                         </div>

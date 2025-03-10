@@ -1,9 +1,13 @@
 import { useRouter } from 'next/router';
+
+
 import Layout from '../../../app/layout';
 import InnerPagesBanner from '@/components/InnerPagesBanner';
 import Sidebar from '@/components/shop/Sidebar';
 import CarouselShopping from "@/components/CarouselShopping";
 import Image from 'next/image';
+
+
 
 export async function getServerSideProps(context) {
     const { id } = context.params;

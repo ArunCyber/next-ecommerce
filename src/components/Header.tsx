@@ -1,10 +1,11 @@
 
 import NavMenu from "@/components/NavMenu";
+import FontAwesomeIcon from "@/components/FontAwesomeIcon";
 
 export default function Header() {
-    return (
-        <>
-        <NavMenu />
+  return (
+    <>
+      <NavMenu />
       <div className="modal fade" id="searchModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-fullscreen">
           <div className="modal-content rounded-0">
@@ -18,13 +19,14 @@ export default function Header() {
               <div className="input-group w-75 mx-auto d-flex">
                 <input type="search" className="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1" />
                 <span id="search-icon-1" className="input-group-text p-3">
-                  <i className="fa fa-search"></i>
+                  <FontAwesomeIcon icon={['fas', 'search']} />
+                  {/* <i className="fa fa-search"></i> */}
                 </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-        </>
-    );
+    </>
+  );
 }
